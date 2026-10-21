@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Çiğdem'e Aşk Alarmı 💖</title>
+<style>
+:root{--pink:#ff3d81;--red:#ff1744;--yellow:#ffe66d;--purple:#7b2cff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;overflow-x:hidden;color:#fff;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:linear-gradient(-45deg,#ff1744,#ff5aa5,#7428d6,#ff7b00);background-size:400% 400%;animation:bg 9s ease infinite}
+@keyframes bg{0%,100%{background-position:0 50%}50%{background-position:100% 50%}}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 20% 20%,#fff5 0 2px,transparent 3px),radial-gradient(circle at 80% 30%,#fff4 0 2px,transparent 3px);background-size:70px 70px,95px 95px;animation:stars 8s linear infinite}@keyframes stars{to{background-position:140px 140px,-190px 190px}}
+main{width:min(940px,92%);margin:auto;padding:34px 0 100px;position:relative;z-index:2}.hero{text-align:center;padding:34px 10px 18px}.hero h1{font-size:clamp(3rem,10vw,7rem);line-height:.92;margin:0;text-shadow:0 7px 0 #a40044,0 14px 30px #0007;animation:boing 1.2s infinite}.hero p{font-size:clamp(1.05rem,3vw,1.55rem);font-weight:800}.badge{display:inline-block;background:#fff;color:#ff1765;padding:9px 16px;border-radius:999px;font-weight:900;transform:rotate(-2deg);box-shadow:0 8px 20px #0004}
+@keyframes boing{0%,100%{transform:scale(1) rotate(-1deg)}50%{transform:scale(1.06) rotate(1deg)}}
+.card{position:relative;margin:22px 0;padding:25px;border:2px solid #ffffff80;border-radius:28px;background:#ffffff1c;box-shadow:0 18px 50px #25002c66,inset 0 1px #fff8;backdrop-filter:blur(13px)}.card h2{margin-top:0;font-size:clamp(1.55rem,5vw,2.3rem)}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.fact{background:#fff;color:#8a174d;border-radius:18px;padding:14px;font-weight:900;box-shadow:0 7px 0 #ff9ec5;animation:float 3s ease-in-out infinite}.fact:nth-child(2){animation-delay:.4s}.fact:nth-child(3){animation-delay:.8s}.fact:nth-child(4){animation-delay:1.2s}@keyframes float{50%{transform:translateY(-8px) rotate(1deg)}}
+.warning{margin-top:20px;padding:16px;background:#19001f66;border:2px dashed var(--yellow);border-radius:18px}.warning b{color:var(--yellow)}
+.counter{text-align:center;font-size:clamp(5rem,18vw,10rem);font-weight:1000;color:var(--yellow);text-shadow:0 8px 0 #d64b00;animation:pulse .7s infinite}@keyframes pulse{50%{transform:scale(1.12)}}
+.buttons{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.btn{border:0;border-radius:18px;padding:17px 14px;font-size:1rem;font-weight:1000;cursor:pointer;color:#79123c;background:#fff;box-shadow:0 8px 0 #be2564;transition:.12s;touch-action:manipulation}.btn:hover{transform:translateY(-3px) rotate(-1deg);filter:saturate(1.4)}.btn:active{transform:translateY(6px);box-shadow:0 2px 0 #be2564}.btn.danger{background:var(--yellow);color:#7a2600;box-shadow:0 8px 0 #dd6500}.btn.dark{background:#2a0039;color:#fff;box-shadow:0 8px 0 #120019}.btn.wide{grid-column:1/-1;background:linear-gradient(90deg,#fff,#ffe0ee,#fff)}
+#message{min-height:82px;display:grid;place-items:center;text-align:center;font-size:clamp(1.25rem,4vw,2rem);font-weight:1000;color:var(--yellow);text-shadow:0 3px 0 #a40044}.meter{height:30px;background:#25002c99;border:3px solid #fff;border-radius:999px;overflow:hidden}.meter>div{height:100%;width:0;background:linear-gradient(90deg,#ffe600,#ff6600,#ff004c);transition:width 1s cubic-bezier(.2,1.7,.5,1)}
+.fall{position:fixed;top:-60px;pointer-events:none;z-index:1;animation:fall linear forwards}@keyframes fall{to{transform:translateY(115vh) rotate(900deg)}}
+.particle{position:fixed;pointer-events:none;z-index:9999;font-size:28px;animation:explode 1.25s ease-out forwards}@keyframes explode{to{transform:translate(var(--x),var(--y)) rotate(720deg) scale(.2);opacity:0}}
+.flash{position:fixed;inset:0;background:#fff;z-index:9998;pointer-events:none;animation:flash .45s forwards}@keyframes flash{to{opacity:0}}.shake{animation:screenShake .08s 9}@keyframes screenShake{25%{transform:translate(8px,-5px)}75%{transform:translate(-8px,5px)}}
+.popup{position:fixed;inset:0;display:none;place-items:center;background:#170015dd;z-index:10000;padding:20px}.popup.show{display:grid}.popup-box{width:min(700px,95vw);background:#fff;color:#a00048;padding:28px;border-radius:30px;text-align:center;box-shadow:0 0 80px #ff2e88;animation:pop .35s both}.popup-box h2{font-size:clamp(2rem,8vw,5rem);margin:0}.popup-box button{margin-top:18px}@keyframes pop{from{transform:scale(.2) rotate(-15deg)}to{transform:scale(1) rotate(0)}}
+.ticker{position:fixed;bottom:0;left:0;right:0;z-index:20;background:#fff;color:#d00056;padding:10px 0;font-weight:1000;overflow:hidden;white-space:nowrap}.ticker span{display:inline-block;animation:ticker 13s linear infinite}@keyframes ticker{to{transform:translateX(-50%)}}
+.small{opacity:.92;font-size:.92rem}.signature{text-align:center;font-weight:900;margin-top:34px}@media(max-width:650px){.facts,.buttons{grid-template-columns:1fr}.btn.wide{grid-column:auto}.card{padding:19px}.hero{padding-top:18px}}
+</style></head>
+<body>
+<div id="startScreen" style="position:fixed;inset:0;z-index:999999;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(135deg,#ff0f7b,#f89b29);padding:20px;overflow:hidden;">
+  <div style="position:absolute;inset:0;background:radial-gradient(circle at 30% 20%,rgba(255,255,255,.32),transparent 24%),radial-gradient(circle at 75% 70%,rgba(255,255,255,.22),transparent 25%);animation:pulse 1.2s infinite;pointer-events:none;"></div>
+  <div style="position:relative;z-index:1;max-width:820px;">
+    <div style="font-size:clamp(4rem,14vw,9rem);animation:boing 1.2s infinite;">❤️</div>
+    <h1 style="font-size:clamp(2.5rem,8vw,6rem);line-height:.95;color:white;margin:5px 0 20px;text-shadow:0 7px 0 #b3004d,0 18px 35px rgba(0,0,0,.35);">AŞKIM DUR!</h1>
+    <p style="color:white;font-size:clamp(1.05rem,3.5vw,1.55rem);font-weight:900;margin:0 auto 28px;max-width:680px;">Tam etki için önce şarkımızı aç, sonra buraya geri dön. Kulaklık tavsiye edilir 🎧</p>
+    <a href="https://www.youtube.com/watch?v=mWQACEqf4QY&list=RDmWQACEqf4QY&start_radio=1" target="_blank" rel="noopener noreferrer" onclick="startBurst(event)" style="display:block;background:white;color:#ff006e;text-decoration:none;padding:22px 30px;border-radius:25px;font-size:clamp(1.25rem,4vw,2rem);font-weight:1000;box-shadow:0 11px 0 #b0004b,0 19px 35px rgba(0,0,0,.28);margin:0 auto 25px;max-width:650px;animation:boing 1.4s infinite;">🎵 ÖNCE ŞARKIYI AÇ SONRA BAŞLA 🎵</a>
+    <button onclick="enterSite(this)" class="btn danger" style="font-size:clamp(1rem,3vw,1.35rem);padding:18px 30px;">❤️ ŞARKIYI AÇTIM, BAŞLAYALIM ❤️</button>
+    <p style="color:white;font-weight:800;margin-top:20px;opacity:.9;">Butona basınca şarkı yeni sekmede açılır.</p>
+  </div>
+</div>
+
+<main>
+<section class="hero"><div class="badge">⚠️ AŞIRI AŞK İÇERİR</div><h1>AŞKIMMM!</h1><p>Bu sayfa, İlkhan'ın Çiğdem'e olan sevgisini internete sığdırmaya çalışırken bozulmuştur.</p></section>
+<section class="card"><h2>📊 Resmî Lavuk Sayacı</h2><div class="counter">0</div><p style="text-align:center;font-weight:900">Radar taraması tamamlandı: LAVUK YOK. ZERO. SIFIR. YOK HÜKMÜNDE.</p></section>
+<section class="card"><h2>💖 Çiğdem Hakkında Çok Bilimsel Bilgiler</h2><div class="facts"><div class="fact">☁️ Pamuk Surat</div><div class="fact">🌸 Cennet kokulu boyun</div><div class="fact">🤏 Dünyanın en güzel parmakları</div><div class="fact">❤️ İçinde sınırsız aşk bulunan kalp</div></div><div class="warning"><b>⚠️ YAN ETKİLERİ:</b><br>• Sürekli öpme isteği oluşturur<br>• Sarılma bağımlılığı yapar<br>• İlkhan'da kalp çarpıntısına sebep olur<br>• Ayrılınca özlem seviyesi kritik düzeye çıkar</div></section>
+<section class="card"><h2>🚨 Büyük Kırmızı Olmayan Butonlar</h2><div class="buttons"><button class="btn danger" onclick="loveAlarm(this)">AŞK ALARMINI ÇALIŞTIR</button><button class="btn" onclick="explode(this,'❤️')">1000 KALP PATLAT</button><button class="btn dark" onclick="truck(this)">KAMYONU DURDURUN 🚚</button><button class="btn" onclick="coffee(this)">KAHVE MANİPÜLASYONU ☕</button><button class="btn" onclick="hgs(this)">HGS AŞK PAKETİ</button><button class="btn danger" onclick="testLove(this)">BENİ SEVİYOR MUSUN?</button><button class="btn wide" onclick="finalBoss(this)">FINAL BOSS: İLKHAN NE KADAR AŞIK?</button></div><div id="message">Bir butona bas... ama sonuçlarından ben sorumlu değilim 😌</div></section>
+<section class="card"><h2>❤️ Aşk Seviyesi</h2><div class="meter"><div id="meter"></div></div><p id="meterText" style="text-align:center;font-weight:900">Ölçüm için final boss'a bas.</p></section>
+<div class="signature">17 Temmuz'da başlayan ve her gün biraz daha güzelleşen hikâyemize...<br>İyi ki varsın canımın içi. Seni çooook seviyorum. ❤️</div>
+</main>
+<div class="popup" id="popup"><div class="popup-box"><h2 id="popTitle">AAAAA!</h2><p id="popText"></p><button class="btn" onclick="closePop()">Tamam aşkım 😌</button></div></div>
+<div class="ticker"><span>❤️ ÇİĞDEM ÇOK SEVİLİYOR • LAVUK COUNT: 0 • PAMUK SURAT TESPİT EDİLDİ • KALP 500'LE ATIYOR • SENİ ÇOK SEVİYORUMMM • ❤️ ÇİĞDEM ÇOK SEVİLİYOR • LAVUK COUNT: 0 • PAMUK SURAT TESPİT EDİLDİ • KALP 500'LE ATIYOR • SENİ ÇOK SEVİYORUMMM • </span></div>
+<script>
+const $=s=>document.querySelector(s), messages=["ABOOOO AŞK SEVİYESİ TAŞTI!","OY BEEEE ÇİĞDEM'E BAK!","KALBİM 500'LE ATIYOR!","PAMUK SURAT ALARMI!","SENİ ÇOOOOOK SEVİYORUM!","SARILMA İHTİYACI: KRİTİK!"];
+function say(t){$('#message').textContent=t}
+function burst(x,y,icon='❤️',n=90){const icons=[icon,'💖','💕','✨','🌸','💥','🥹'];for(let i=0;i<n;i++){let p=document.createElement('i');p.className='particle';p.textContent=icons[Math.floor(Math.random()*icons.length)];p.style.left=x+'px';p.style.top=y+'px';let a=Math.random()*Math.PI*2,d=80+Math.random()*420;p.style.setProperty('--x',Math.cos(a)*d+'px');p.style.setProperty('--y',Math.sin(a)*d+'px');document.body.appendChild(p);setTimeout(()=>p.remove(),1400)}}
+function bang(el,icon='❤️',n=100){let r=el.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,icon,n);document.body.classList.add('shake');setTimeout(()=>document.body.classList.remove('shake'),800);let f=document.createElement('div');f.className='flash';document.body.appendChild(f);setTimeout(()=>f.remove(),500)}
+function pop(title,text){$('#popTitle').textContent=title;$('#popText').textContent=text;$('#popup').classList.add('show')}
+function closePop(){$('#popup').classList.remove('show')}
+function explode(e,icon){bang(e,icon,160);say('KALPLER PATLADI! AAAAAA KAÇINNNN!')}
+function loveAlarm(e){bang(e,'🚨',130);pop('🚨 AŞK ALARMI 🚨','Çiğdem çok güzel olduğu için sistem çöktü. İlkhan şu an yoğun şekilde sarılmak ve boynunu koklamak istiyor.');say('ALARM ALARM ALARM: ÇİĞDEM ÇOK SEVİLİYOR!')}
+function truck(e){bang(e,'🚚',80);say('KAMYON DURDU AMA İLKHAN\'IN AŞKI DURMADI!')}
+function coffee(e){bang(e,'☕',90);say('Kahve manipülasyonu başarılı. Ödül: 848473 tane öpücük.')}
+function hgs(e){bang(e,'💳',90);pop('HGS AŞK PAKETİ','Ömür boyu sınırsız geçiş tanımlandı. Gişe: Çiğdem’in kalbi. Bakiye: Sonsuz aşk.');say('HGS geçti: DIT DIT! Aşk bakiyesi sınırsız.')}
+function testLove(e){bang(e,'🥹',110);pop('SORU GEÇERSİZ','“Evet” dışında teknik olarak mümkün bir cevap bulunamadı. Sistem otomatik olarak EVEEEEEET işaretledi.');say('Test sonucu: EVET x sonsuz!')}
+function finalBoss(e){bang(e,'💥',220);$('#meter').style.width='100%';$('#meterText').textContent='ÖLÇÜLEMEDİ: CİHAZ YANDI 🔥';pop('SONUÇ: SONSUZ','İlkhan’ın Çiğdem’e aşkı ölçüm limitini aştı. Bilim insanları “ABOOOO” diyerek laboratuvarı terk etti.');say('FINAL BOSS YENİLDİ: AŞK KAZANDI!')}
+setInterval(()=>{let d=document.createElement('div');d.className='fall';d.textContent=['❤️','🌹','☕','🥯','🐻','✨','💖'][Math.floor(Math.random()*7)];d.style.left=Math.random()*100+'vw';d.style.fontSize=18+Math.random()*33+'px';d.style.animationDuration=4+Math.random()*6+'s';document.body.appendChild(d);setTimeout(()=>d.remove(),10500)},190);
+setInterval(()=>say(messages[Math.floor(Math.random()*messages.length)]),6500);
+document.addEventListener('click',e=>{if(e.target.tagName!=='BUTTON')burst(e.clientX,e.clientY,'✨',14)});
+function startBurst(e){burst(innerWidth/2,innerHeight/2,'🎵',130)}
+function enterSite(el){bang(el,'❤️',180);setTimeout(()=>{const x=document.getElementById('startScreen');x.style.transition='opacity .7s,transform .7s';x.style.opacity='0';x.style.transform='scale(1.15)';setTimeout(()=>x.remove(),720)},250)}
+</script></body></html>
